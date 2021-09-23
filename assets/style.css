@@ -2,3 +2,75 @@ body {
     margin: 0;
     padding: 0;
 }
+
+header {
+    background-color: cornflowerblue;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid blue;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    border: 2px solid blue;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav {
+    margin: 2px 2px;
+    border: 2px blue solid;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+}
+
+
+header nav ul li a {
+    font-size: 22px;
+    color: black;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px blue solid;
+}
+
+.section-title {
+    color: red;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    border: 2px blue solid;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    border: 2px blue solid;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    border: 2px blue solid;
+}
+
+footer {
+    background-color:cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    border: 2px blue solid;
+}
