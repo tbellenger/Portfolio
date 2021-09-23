@@ -7,11 +7,15 @@ body {
 }
 
 header {
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
+    background-image: url("./images/header.png");
+    background-size: stretch;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: cornsilk;
+    text-shadow: 0 0 4px black, 0 0 2px white;
 }
 
 header h1 {
@@ -41,7 +45,8 @@ header nav ul {
 
 header nav ul li a {
     font-size: 22px;
-    color: black;
+    color: cornsilk;
+    text-shadow: 0 0 4px black, 0 0 2px white;
 }
 
 header nav ul li a:hover {
@@ -53,12 +58,12 @@ header nav ul li a:hover {
     display: flex;
     flex-wrap:wrap;
     gap: 2em;
-    border: 2px blue solid;
 }
 
 .section-title {
-    color: red;
-    border-right: 6px green solid;
+    color: cornflowerblue;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    border-right: 6px grey solid;
     flex: 0 0 180px;
     font-size: 36px;
     text-align: right;
