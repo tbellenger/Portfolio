@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
     background-color: cornflowerblue;
-    padding: 20px 40px;
+    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    border: 2px solid blue;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
-    border: 2px solid blue;
 }
 
 header a {
@@ -22,12 +24,16 @@ header a {
 }
 
 header nav {
-    margin: 2px 2px;
-    border: 2px blue solid;
+    display: flex;
+    align-items: center;
 }
 
 header nav ul {
+    padding:0;
+    margin:0;
     display: flex;
+    align-content: center;
+    justify-content: center;
     gap: 1em;
     list-style-type: none;
 }
@@ -40,31 +46,48 @@ header nav ul li a {
 
 header nav ul li a:hover {
     border-bottom: 2px blue solid;
+    border-top: 2px blue solid;
+}
+
+.section {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 2em;
+    border: 2px blue solid;
 }
 
 .section-title {
     color: red;
+    border-right: 6px green solid;
+    flex: 0 0 180px;
+    font-size: 36px;
+    text-align: right;
+    padding-right: 10px;
 }
 
-.about {
+.section-cta {
+    margin: 20px 0 20px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
-    border: 2px blue solid;
+    flex: 4;
+    justify-content: center;
+    gap: 1em;
 }
 
-.work {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    border: 2px blue solid;
+.card img {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-.contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    border: 2px blue solid;
+.card {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 0 400px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:nth-child(2) {
+    width: 200px;
 }
 
 footer {
