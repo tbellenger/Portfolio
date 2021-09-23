@@ -20,6 +20,7 @@ header {
     justify-content: space-between;
     color: cornsilk;
     text-shadow: 0 0 4px black, 0 0 2px white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -103,7 +104,7 @@ header nav ul li a:hover {
 footer {
     background-color:cornflowerblue;
     color: cornsilk;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
+    padding: 10px;
+    text-shadow: 0 0 4px black, 0 0 2px white;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
 }
