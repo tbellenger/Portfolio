@@ -70,35 +70,69 @@ header nav ul li a:hover {
     color: cornflowerblue;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     border-right: 6px grey solid;
-    flex: 0 0 180px;
+    display: flex;
+    flex: 1 1 20%;
     font-size: 36px;
     text-align: right;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .section-cta {
     margin: 20px 0 20px 0;
     display: flex;
     flex-wrap: wrap;
-    flex: 4;
     justify-content: center;
+    align-content: center;
+    flex: 2 1 70%;
     gap: 1em;
 }
 
 .card img {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
 }
 
 .card {
     padding: 10px;
     margin: 10px;
-    flex: 1 0 400px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-.card:nth-child(1) {
-    width: 75%;
+.card h3 {
+    position:absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.hero {
+    flex: 1 1 70%;
+}
+
+.contacts {
+    margin: 10px;
+    background-color: cornflowerblue;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: cornsilk;
+    border-radius: 5px;
+    border: 2px solid cornsilk;
+    padding: 5px;
+    margin: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.contacts a:hover {
+    background-color: cornsilk;
+    color: cornflowerblue;
 }
 
 footer {
@@ -107,4 +141,29 @@ footer {
     padding: 10px;
     text-shadow: 0 0 4px black, 0 0 2px white;
     box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 575px) {
+    .section-title {
+        border-right: 0;
+        justify-content: center;
+        border-bottom: 6px solid grey;
+    }
+
+    .section-cta {
+        justify-content: center;
+    }
+
+    .card { 
+        flex: 0 1 60%;
+        align-content: center;
+    }
+
+    .hero {
+        flex: 0 1 75%;
+    }
+
+    .contacts a {
+        width: 60%;
+    }
 }
