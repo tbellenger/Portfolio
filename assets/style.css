@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+/* set variables for colors */
 :root {
     --inverse-color: cornsilk;
     --main-color: cornflowerblue;
     --bar-color: grey;
 }
 
+/* set background color for body and font family */
 body {
     margin: 0;
     padding: 0;
@@ -13,8 +15,8 @@ body {
     background-color:rgba(247, 245, 235, 0.568);
 }
 
+/* set up header image to be reactive to page size, flex for header title and nav section */
 header {
-    /* background-color: cornflowerblue; */
     background-image: url("./images/header.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +61,7 @@ header nav ul li a {
     font-size: 22px;
     color: var(--inverse-color);
     text-shadow: 0 0 4px black, 0 0 2px white;
-    transition: border-bottom 0.3s, border-top 0.3s;
+    transition: border 0.3s;
 }
 
 header nav ul li a:hover {
@@ -86,6 +88,7 @@ header nav ul li a:hover {
     padding-left: 10px;
 }
 
+/* section contents container */
 .section-cta {
     margin: 20px 0 20px 0;
     display: flex;
@@ -96,6 +99,7 @@ header nav ul li a:hover {
     gap: 1em;
 }
 
+/* cards within the section contents for each article */
 .card {
     padding: 10px;
     margin: 10px;
@@ -105,6 +109,7 @@ header nav ul li a:hover {
     width: 230px;
 }
 
+/* card title text with ribbon transition on title */
 .card h3 {
     position:absolute;
     top: 8px;
@@ -114,37 +119,43 @@ header nav ul li a:hover {
     border-top: 2px solid var(--bar-color);
     border-bottom: 2px solid var(--bar-color);
     border-right: 2px solid var(--bar-color);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 0 10px 10px 0;
     padding: 5px 15px;
     font-size: 24px;
     transition: 0.3s;
 }
 
+/* this is the ribbon extending effect on the card titles */
 .card a:hover h3 {
     padding: 5px 40px 5px 15px;
 }
 
+/* Image size fixes - std should fill to container width, hero has min width and about has width according to page size */
 .card img {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
     width:100%;
+    max-height: 300px;
     object-fit:cover;
-    object-position: left;
+    object-position: top left;
 }
 
 .card .hero-img {
     min-width: 100%;
     min-height: 300px;
-    /* object-fit:cover; */
 }
 
 .about img {
     width: 30%;
 }
+/* end image size fixes */
 
+/* make sure hero cards take a lot of width - effects about, work and contact section!! */
 .hero {
     flex: 1 1 70%;
 }
 
+/* contact section styling */
 .contacts {
     margin: 10px;
     background-color: var(--main-color);
@@ -153,6 +164,7 @@ header nav ul li a:hover {
     justify-content: space-evenly;
 }
 
+/* contacts links with transition effect */
 .contacts a {
     text-decoration: none;
     color: var(--inverse-color);
@@ -170,6 +182,7 @@ header nav ul li a:hover {
     color: var(--main-color);
 }
 
+/* footer with shadow over the body of the page */
 footer {
     background-color:var(--main-color);
     color: var(--inverse-color);
@@ -178,6 +191,12 @@ footer {
     box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* screen size adjustments for smaller screens
+    Section title moves from being a left column to 
+    sitting above with the section below. Separator 
+    bar is moved from right to bottom. Some flex 
+    fixes for smaller screens
+ */
 @media screen and (max-width: 575px) {
     .section-title {
         border-right: 0;
