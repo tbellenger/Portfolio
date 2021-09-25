@@ -148,6 +148,7 @@ header nav ul li a:hover {
 
 .about img {
     width: 30%;
+    max-height:unset;
 }
 /* end image size fixes */
 
@@ -224,5 +225,12 @@ footer {
 
     .contacts a {
         width: 60%;
+    }
+}
+
+/* Fix the avatar image from getting too big on really wide screens */
+@media screen and (min-width: 1048px) {
+    .about img {
+        width: 15%;
     }
 }
