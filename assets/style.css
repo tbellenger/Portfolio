@@ -59,6 +59,7 @@ header nav ul li a {
     font-size: 22px;
     color: var(--inverse-color);
     text-shadow: 0 0 4px black, 0 0 2px white;
+    transition: border-bottom 0.3s, border-top 0.3s;
 }
 
 header nav ul li a:hover {
@@ -95,27 +96,49 @@ header nav ul li a:hover {
     gap: 1em;
 }
 
-.card img {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
-    width: 100%;
-}
-
-.about img {
-    width: 30%;
-}
-
 .card {
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     position: relative;
+    width: 230px;
 }
 
 .card h3 {
     position:absolute;
-    bottom: 8px;
-    left: 16px;
+    top: 8px;
+    left: 0px;
+    background-color: var(--main-color);
+    color: var(--inverse-color);
+    border-top: 2px solid var(--bar-color);
+    border-bottom: 2px solid var(--bar-color);
+    border-right: 2px solid var(--bar-color);
+    border-radius: 0 10px 10px 0;
+    padding: 5px 15px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.card a:hover h3 {
+    padding: 5px 40px 5px 15px;
+}
+
+.card img {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); 
+    width:100%;
+    object-fit:cover;
+    object-position: left;
+}
+
+.card .hero-img {
+    min-width: 100%;
+    min-height: 300px;
+    /* object-fit:cover; */
+}
+
+.about img {
+    width: 30%;
 }
 
 .hero {
@@ -139,6 +162,7 @@ header nav ul li a:hover {
     margin: 10px;
     width: 40%;
     text-align: center;
+    transition: 0.3s;
 }
 
 .contacts a:hover {
