@@ -56,7 +56,6 @@ header nav ul {
     list-style-type: none;
 }
 
-
 header nav ul li a {
     font-size: 22px;
     color: var(--inverse-color);
@@ -68,7 +67,9 @@ header nav ul li a:hover {
     border-bottom: 2px var(--main-color) solid;
     border-top: 2px var(--main-color) solid;
 }
+/* End header css */
 
+/* Sections as flex boxes */
 .section {
     display: flex;
     flex-wrap:wrap;
