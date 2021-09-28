@@ -7,10 +7,6 @@
   --bar-color: grey;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* set background color for body and font family */
 body {
   margin: 0;
