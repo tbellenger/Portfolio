@@ -138,10 +138,6 @@ header nav ul li a:hover {
   padding: 5px 40px 5px 15px;
 }
 
-section:target > h2 {
-  color: red;
-}
-
 /* Image size fixes - std should fill to container width, hero has min width and about has width according to page size */
 .card img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
