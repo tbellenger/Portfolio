@@ -7,6 +7,10 @@
   --bar-color: grey;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* set background color for body and font family */
 body {
   margin: 0;
@@ -89,6 +93,8 @@ header nav ul li a:hover {
   padding-left: 10px;
 }
 
+
+
 /* section contents container */
 .section-cta {
   margin: 20px 0 20px 0;
@@ -130,6 +136,10 @@ header nav ul li a:hover {
 /* this is the ribbon extending effect on the card titles */
 .card a:hover h3 {
   padding: 5px 40px 5px 15px;
+}
+
+section:target > h2 {
+  color: red;
 }
 
 /* Image size fixes - std should fill to container width, hero has min width and about has width according to page size */
