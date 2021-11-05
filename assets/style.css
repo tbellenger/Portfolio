@@ -23,12 +23,13 @@ header {
   background-size: cover;
   position: relative;
   padding: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   color: var(--inverse-color);
-  text-shadow: 0 0 4px black, 0 0 2px white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px black, 0 0 1px white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
@@ -69,51 +70,20 @@ header nav ul li a:hover {
 }
 /* End header css */
 
-/* Sections as flex boxes */
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+
+.row {
+  margin: 10px 0;
 }
 
-/* Left hand title with bar separation */
-.section-title {
-  color: var(--main-color);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  border-right: 6px var(--bar-color) solid;
-  display: flex;
-  flex: 1 0 4em;
-  font-size: 36px;
-  text-align: right;
-  padding-right: 10px;
-  padding-left: 10px;
+.horizontal-bar {
+  border-bottom: 2px solid black;
 }
 
-
-
-/* section contents container */
-.section-cta {
-  margin: 20px 0 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  flex: 2 1 70%;
-  gap: 1em;
+.vertical-bar {
+  border-right: 2px solid black;
 }
-
-/* cards within the section contents for each article */
-.card {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  position: relative;
-  width: 230px;
-}
-
 /* card title text with ribbon transition on title */
-.card .label {
+.label {
   position: absolute;
   top: 15px;
   left: 0px;
@@ -124,57 +94,46 @@ header nav ul li a:hover {
   border-right: 2px solid var(--bar-color);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   border-radius: 0 10px 10px 0;
-  
   transition: 0.3s;
 }
 
-.card .label h3 {
-  padding: 0px 15px;
+.label h3 {
+  padding: 5px 15px 0 15px;
   font-size: 18px;
 }
 
-.card .label p {
+.label p {
   padding: 0px 15px;
   font-size: 12px;
 }
 
 /* this is the ribbon extending effect on the card titles */
-.card a:hover .label {
+a:hover .label {
   padding: 0px 40px 0px 15px;
 }
 
 /* Image size fixes - std should fill to container width, hero has min width and about has width according to page size */
-.card img {
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+img {
   width: 100%;
-  max-height: 300px;
+  height: 300px !important;
   object-fit: cover;
-  object-position: top left;
+  object-position: top center;
 }
 
-.card .hero-img {
-  min-width: 100%;
-  min-height: 300px;
-}
-
-.about img {
+.avatar {
   width: 30%;
-  max-height: unset;
 }
+
 /* end image size fixes */
 
-/* make sure hero cards take a lot of width - effects about, work and contact section!! */
-.hero {
-  flex: 1 1 70%;
+.project {
+  position: relative;
 }
 
 /* contact section styling */
 .contacts {
-  margin: 10px;
   background-color: var(--main-color);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  border-radius: 5px;
 }
 
 /* contacts links with transition effect */
@@ -183,9 +142,6 @@ header nav ul li a:hover {
   color: var(--inverse-color);
   border-radius: 5px;
   border: 2px solid var(--inverse-color);
-  padding: 5px;
-  margin: 10px;
-  width: 40%;
   text-align: center;
   transition: 0.3s;
 }
@@ -201,47 +157,5 @@ footer {
   color: var(--inverse-color);
   padding: 10px;
   text-shadow: 0 0 4px black, 0 0 2px white;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* screen size adjustments for smaller screens
-    Section title moves from being a left column to 
-    sitting above with the section below. Separator 
-    bar is moved from right to bottom. Some flex 
-    fixes for smaller screens
- */
-@media screen and (max-width: 575px) {
-  .section-title {
-    border-right: 0;
-    justify-content: center;
-    border-bottom: 6px solid var(--bar-color);
-  }
-
-  .section-cta {
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 1 60%;
-    align-content: center;
-  }
-
-  .about img {
-    width: 50%;
-  }
-
-  .hero {
-    flex: 0 1 75%;
-  }
-
-  .contacts a {
-    width: 60%;
-  }
-}
-
-/* Fix the avatar image from getting too big on really wide screens */
-@media screen and (min-width: 1048px) {
-  .about img {
-    width: 15%;
-  }
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.5);
 }
