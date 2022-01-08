@@ -61,7 +61,7 @@ header nav ul li a {
   font-size: 22px;
   color: var(--inverse-color);
   text-shadow: 0 0 4px black, 0 0 2px white;
-  transition: border 0.3s;
+  transition: border 0.2s;
 }
 
 header nav ul li a:hover {
@@ -70,18 +70,6 @@ header nav ul li a:hover {
 }
 /* End header css */
 
-
-.row {
-  margin: 10px 0;
-}
-
-.horizontal-bar {
-  border-bottom: 2px solid black;
-}
-
-.vertical-bar {
-  border-right: 2px solid black;
-}
 /* card title text with ribbon transition on title */
 .label {
   position: absolute;
@@ -121,7 +109,7 @@ img {
 }
 
 .avatar {
-  width: 30%;
+  width: 300px;
 }
 
 /* end image size fixes */
